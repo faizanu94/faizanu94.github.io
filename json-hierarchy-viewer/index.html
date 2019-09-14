@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html ng-app="json-hierarchy-viewer">
+
+<head>
+	<title>JSON Hierarchy Viewer</title>
+	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="assets/css/codemirror.min.css" />
+	<link rel="stylesheet" href="assets/css/style.min.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148011047-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-148011047-1');
+	</script>
+
+</head>
+
+<body ng-controller="JSONHierarchyViewerController">
+	<div class="navbar">
+		<h1 class="header">JSON Hierarchy Viewer</h1>
+	</div>
+
+	<div class="container">
+		<div class="left">
+			<textarea ng-model="text"></textarea>
+		</div>
+		<div class="right">
+			<collection collection="data"></collection>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="assets/js/codemirror.min.js"></script>
+	<script type="text/javascript" src="assets/js/underscore-min.js"></script>
+	<script type="text/javascript" src="assets/js/angular.min.js"></script>
+	<script type="text/javascript" src="assets/js/javascript.min.js"></script>
+	<script type="text/javascript" src="assets/js/jsonlint.min.js"></script>
+	<script type="text/javascript" src="assets/js/ui-codemirror.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
